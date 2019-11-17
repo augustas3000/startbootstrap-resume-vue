@@ -21,7 +21,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 import axios from 'axios'
 
 Vue.prototype.$axios = axios.create({
-  baseURL: 'http://localhost:3000/db'
+  baseURL: 'http://localhost:3000'
 })
 
 // Main SCSS File
