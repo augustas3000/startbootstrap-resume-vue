@@ -30,33 +30,16 @@ export default {
   name: "Education",
   data() {
     return {
-      educationList: [
-        {
-          school: "University of Colorado Boulder",
-          degree: "Bachelor of Science",
-          program: "Computer Science - Web Development Track",
-          dates: [
-            {
-              start: "August 2006",
-              end: "May 2010"
-            }
-          ],
-          gpa: "3.23"
-        },
-        {
-          school: "James Buchanan High School",
-          degree: "Technology Magnet Program",
-          program: "",
-          dates: [
-            {
-              start: "August 2002",
-              end: "May 2006"
-            }
-          ],
-          gpa: "3.56"
-        }
-      ]
+      educationList: []
     };
+  },
+  mounted: async function() {
+    try {
+      const res = await this.$axios.get('/education')
+      this.educationList = res.data
+    } catch (e) {
+      console.log(e)      
+    }
   }
 };
 </script>

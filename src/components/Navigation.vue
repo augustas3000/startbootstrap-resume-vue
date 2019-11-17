@@ -30,33 +30,16 @@ export default {
   data() {
     return {
       name: "Clarence Taylor",
-      navigationList: [
-        {
-          title: "About",
-          url: "#about"
-        },
-        {
-          title: "Experience",
-          url: "#experience"
-        },
-        {
-          title: "Education",
-          url: "#education"
-        },
-        {
-          title: "Skills",
-          url: "#skills"
-        },
-        {
-          title: "Interests",
-          url: "#interests"
-        },
-        {
-          title: "Awards",
-          url: "#awards"
-        }
-      ]
+      navigationList: []
     };
+  },
+  mounted: async function() {
+    try {
+      const res = await this.$axios.get('/navigation')
+      this.navigationList = res.data
+    } catch (e) {
+      console.log(e)
+    }
   }
 };
 </script>

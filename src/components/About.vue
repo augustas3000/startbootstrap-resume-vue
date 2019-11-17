@@ -38,29 +38,16 @@ export default {
       },
       telephone: "(317) 585-8468",
       email: "name@email.com",
-      socialList: [
-        {
-          name: "LinkedIn",
-          url: "#",
-          icon: "linkedin"
-        },
-        {
-          name: "GitHub",
-          url: "#",
-          icon: "github"
-        },
-        {
-          name: "Twitter",
-          url: "#",
-          icon: "twitter"
-        },
-        {
-          name: "Facebook",
-          url: "#",
-          icon: "facebook"
-        }
-      ]
+      socialList: []
     };
+  },
+  mounted: async function() {
+    try {
+      const res = await this.$axios.get('/social')
+      this.socialList = res.data
+    } catch (e) {
+      console.log(e)
+    }
   }
 };
 </script>

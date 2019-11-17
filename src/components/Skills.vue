@@ -24,63 +24,16 @@ export default {
   name: "Skills",
   data() {
     return {
-      toolsList: [
-        {
-          name: "HTML5",
-          icon: "html5"
-        },
-        {
-          name: "CSS3",
-          icon: "css3-alt"
-        },
-        {
-          name: "Javascript",
-          icon: "js-square"
-        },
-        {
-          name: "Angular",
-          icon: "angular"
-        },
-        {
-          name: "React",
-          icon: "react"
-        },
-        {
-          name: "NodeJS",
-          icon: "node-js"
-        },
-        {
-          name: "SASS",
-          icon: "sass"
-        },
-        {
-          name: "LESS",
-          icon: "less"
-        },
-        {
-          name: "WordPress",
-          icon: "wordpress"
-        },
-        {
-          name: "Gulp",
-          icon: "gulp"
-        },
-        {
-          name: "Grunt",
-          icon: "grunt"
-        },
-        {
-          name: "NPM",
-          icon: "npm"
-        }
-      ],
-      workflowList: [
-        "Mobile-First, Responsive Design",
-        "Cross Browser Testing & Debugging",
-        "Cross Functional Teams",
-        "Agile Development & Scrum"
-      ]
+      toolsList: [],
+      workflowList: []
     };
+  },
+  mounted: async function() {
+    const tools = await this.$axios.get('/tools')
+    this.toolsList = tools.data
+
+    const workflow = await this.$axios.get('/workflow')
+    this.workflowList = workflow.data
   }
 };
 </script>
