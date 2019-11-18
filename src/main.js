@@ -21,7 +21,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 import axios from 'axios'
 
 Vue.prototype.$axios = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'https://startbootstrap-resume-data.herokuapp.com'
 })
 
 // Main SCSS File
