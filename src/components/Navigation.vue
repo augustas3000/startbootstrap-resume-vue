@@ -3,11 +3,11 @@
     <b-navbar-brand to="#app">
       <span class="d-block d-lg-none">{{ name }}</span>
       <span class="d-none d-lg-block">
-        <img
-          class="img-fluid img-profile rounded-circle mx-auto mb-2"
+        <b-img-lazy
+          class="img-profile rounded-circle mx-auto mb-2"
           src="images/profile.jpg"
           :alt="name"
-        />
+        ></b-img-lazy>
       </span>
     </b-navbar-brand>
     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
