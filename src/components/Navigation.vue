@@ -35,10 +35,10 @@ export default {
   },
   mounted: async function() {
     try {
-      const res = await this.$axios.get('/navigation')
-      this.navigationList = res.data
+      const res = await this.$axios.get("/navigation");
+      this.navigationList = res.data;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 };

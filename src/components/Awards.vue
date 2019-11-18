@@ -22,10 +22,10 @@ export default {
   },
   mounted: async function() {
     try {
-      const res = await this.$axios.get('/awards')
-      this.awardsList = res.data
+      const res = await this.$axios.get("/awards");
+      this.awardsList = res.data;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 };

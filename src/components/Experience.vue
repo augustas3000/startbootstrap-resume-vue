@@ -34,10 +34,10 @@ export default {
   },
   mounted: async function() {
     try {
-      const res = await this.$axios.get('/experience')
-      this.experienceList = res.data
+      const res = await this.$axios.get("/experience");
+      this.experienceList = res.data;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 };

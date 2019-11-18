@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import smoothScroll from 'smooth-scroll';
+import smoothScroll from "smooth-scroll";
 
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -44,7 +44,7 @@ export default {
   created: function() {
     var scroll = new smoothScroll('a[href*="#"]', {
       updateURL: false
-    })
+    });
   }
 };
 </script>

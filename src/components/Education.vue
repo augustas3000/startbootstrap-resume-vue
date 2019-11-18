@@ -35,10 +35,10 @@ export default {
   },
   mounted: async function() {
     try {
-      const res = await this.$axios.get('/education')
-      this.educationList = res.data
+      const res = await this.$axios.get("/education");
+      this.educationList = res.data;
     } catch (e) {
-      console.log(e)      
+      console.log(e);
     }
   }
 };

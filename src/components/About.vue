@@ -7,7 +7,9 @@
       </h1>
       <div class="subheading mb-5">
         {{ address.street }} &middot; {{ address.town }}, {{ address.state }} {{ address.zip }} &middot; {{ telephone }} &middot;
-        <a :href="'mailto:' + email">{{ email }}</a>
+        <a
+          :href="'mailto:' + email"
+        >{{ email }}</a>
       </div>
       <p
         class="lead mb-5"
@@ -43,10 +45,10 @@ export default {
   },
   mounted: async function() {
     try {
-      const res = await this.$axios.get('/social')
-      this.socialList = res.data
+      const res = await this.$axios.get("/social");
+      this.socialList = res.data;
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 };

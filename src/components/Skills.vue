@@ -10,7 +10,11 @@
       </ul>
       <div class="subheading mb-3">Workflow</div>
       <ul class="fa-ul mb-0">
-        <li v-for="(workflow, index) in workflowList" :key="index" class="d-flex align-items-center">
+        <li
+          v-for="(workflow, index) in workflowList"
+          :key="index"
+          class="d-flex align-items-center"
+        >
           <font-awesome-icon :icon="['fas', 'check']" class="fa-li"></font-awesome-icon>
           {{ workflow }}
         </li>
@@ -29,11 +33,11 @@ export default {
     };
   },
   mounted: async function() {
-    const tools = await this.$axios.get('/tools')
-    this.toolsList = tools.data
+    const tools = await this.$axios.get("/tools");
+    this.toolsList = tools.data;
 
-    const workflow = await this.$axios.get('/workflow')
-    this.workflowList = workflow.data
+    const workflow = await this.$axios.get("/workflow");
+    this.workflowList = workflow.data;
   }
 };
 </script>
