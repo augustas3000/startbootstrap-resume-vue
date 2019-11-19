@@ -26,12 +26,11 @@
 <script>
 export default {
   name: "About",
+  props: {
+    name: Array
+  },
   data() {
     return {
-      name: {
-        first: "Clarence",
-        last: "Taylor"
-      },
       address: {
         street: "3542 Berry Street",
         town: "Cheyenne Wells",
