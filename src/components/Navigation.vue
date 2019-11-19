@@ -6,13 +6,8 @@
         <b-img-lazy
           class="img-profile rounded-circle mx-auto mb-2"
           src="images/profile.jpg"
-<<<<<<< HEAD
-          :alt="name"
-        ></b-img-lazy>
-=======
           :alt="name.first + ' ' + name.last"
         />
->>>>>>> master
       </span>
     </b-navbar-brand>
     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
@@ -37,7 +32,6 @@ export default {
   },
   data() {
     return {
-      name: "Clarence Taylor",
       navigationList: []
     };
   },
