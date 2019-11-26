@@ -28,7 +28,10 @@
 export default {
   name: "Navigation",
   props: {
-    name: Array
+    name: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {

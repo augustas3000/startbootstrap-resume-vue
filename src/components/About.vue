@@ -27,7 +27,10 @@
 export default {
   name: "About",
   props: {
-    name: Array
+    name: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {
